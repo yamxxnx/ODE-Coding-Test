@@ -1,67 +1,13 @@
-// const express = require('express');
-
-// const app = express();
-// const port = 3000;
-
-// app.use(express.json())
-
-// const urlDatabase = {}
-
-// function generateShortCode(length = 6) {
-//     const chars= 'abcdefghijklmnopqrstuvwxyz'
-//     let result= ''
-//     for (let i = 0; i<length; i++) {
-//         const randomIndex = Math.floor(Math.random() * chars.length)
-//         result += chars[randomIndex]
-//     }
-//     return result
-// }
-
-// app.post('/shorten', (req, res) => {
-//     const { originalUrl } = req.body;
-
-//     if (!originalUrl ) {
-//         return res.status(400).json({error: 'Invalid or missing URL'})
-//     }
-
-//     const shortCode = generateShortCode();
-
-//     urlDatabase[shortCode] = originalUrl;
-
-//     const shortUrl = `http://localhost:${port}/${shortCode}`
-//     res.json({shortUrl})
-// })
-
-
-// app.get('/:shortCode', (req, res) => {
-//     const { shortCode } = req.params;
-//     const originalUrl = urlDatabase[shortCode];
-
-//     if (originalUrl) {
-//         res.redirect(originalUrl);
-//     } else {
-//         res.status(404).send('Short URL not found');
-
-//     }
-// });
-
-
-
-// app.listen(port, () => {
-//     console.log(`Server running on port : ${port}`)
-// } )
-
-
 
 class Vehicle {
   constructor(type) {
-    this.type = type; // 'motorcycle', 'car', or 'van'
+    this.type = type; 
   }
 }
 
 class ParkingSpot {
   constructor(type) {
-    this.type = type; // 'motorcycle', 'compact', or 'large'
+    this.type = type; 
     this.occupied = false;
   }
 
